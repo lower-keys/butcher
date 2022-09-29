@@ -2757,7 +2757,6 @@ let capt = ` Title: ${judul}
             }
             break
             case 'sponsor': {
-                  case 'sponsor': {
             if (!m.isGroup) throw mess.group
             let qontak = `6285718971848@s.whatsapp.net`
 let dana = `6281911500445@s.whatsapp.net`
@@ -2778,7 +2777,7 @@ let alfamart = `628111500959@s.whatsapp.net`
             let buttons = [
                         { buttonId: 'allmenu', buttonText: { displayText: 'ðŸ“–List Menu' }, type: 1 }
                     ]
-                    await naze.sendButtonText(m.chat, buttons, jawab, naze.user.name, m, {mentions: ments})
+                    await naze.sendButtonText(m.chat, buttons, jawab, naze.user.name, ftoko, {mentions: ments})
             }
             break
             case 'menu': {
@@ -2849,7 +2848,7 @@ contextInfo: { externalAdReply :{
                 ]
                 },
                 ]
-                naze.sendListMsg(m.chat, kukiw, nyoutube, `*Hello Kak ${pushname}*!`, `Pilih Menu`, sections, m)
+                naze.sendListMsg(m.chat, kukiw, nyoutube, `*Hello Kak ${pushname}*!`, `Pilih Menu`, sections, ftoko)
             }
             break
             case 'mgroup': {
@@ -3528,7 +3527,7 @@ let buttons = [{ buttonId: 'simplemenu', buttonText: { displayText: '⬅️Back'
 └───────
 _Donasi Ngab_\n_Jangan Ngarep Free Mulu_`
                 let buttons = [{ buttonId: 'donasi', buttonText: { displayText: '🙏Donasi' }, type: 1 },{ buttonId: 'rules', buttonText: { displayText: '❗Rules' }, type: 1 }]
-            await naze.sendButtonText(m.chat, buttons, anu, nyoutube, m, {mentions: ments})
+            await naze.sendButtonText(m.chat, buttons, anu, nyoutube, ftoko, {mentions: ments})
             }
             break
             case 'sound1':

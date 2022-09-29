@@ -8,7 +8,6 @@ const path = require('path')
 const axios = require('axios')
 const chalk = require('chalk')
 const yts = require('yt-search')
-import { mediafiredl } from '@bochilteam/scraper'
 const google = require('google-it')
 const { exec, spawn, execSync } = require("child_process")
 const moment = require('moment-timezone')
@@ -600,20 +599,9 @@ contextInfo: { externalAdReply :{
                         sourceUrl: sig
                       }}
 })
-            break
-            case 'mediafire': {
-            	let res = await mediafiredl(args[0])
-    let { url, url2, filename, ext, aploud, filesize, filesizeH } = res
-    let caption = `
-*💌 Name:* ${filename}
-*📊 Size:* ${filesizeH}
-*🗂️ Extension:* ${ext}
-*📨 Uploaded:* ${aploud}
-`.trim()
-    m.reply(caption)
-    await naze.sendFile(m.chat, url, filename, '', m, null, { mimetype: ext, asDocument: true })
 }
             break
+            
             case 'chat': {
                 if (!isCreator) throw mess.owner
                 if (!q) throw 'Option : 1. mute\n2. unmute\n3. archive\n4. unarchive\n5. read\n6. unread\n7. delete'

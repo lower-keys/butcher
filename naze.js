@@ -611,15 +611,14 @@ Naze
 Nurotomo
 Warikrr
 Kanna`
-                await naze.sendButton(m.chat, infokan, m, {
-contextInfo: { externalAdReply :{
-                        mediaUrl: '',
+                await naze.sendButton(m.chat, infokan, ftoko, { contextInfo: { externalAdReply :{
+                        mediaUrl: 'https://github.com',
                         mediaType: 2,
-                        description: `Kamar apa yang buat mandi? `,
+                        description: `Andromeda `,
                         title: infokan,
-                        body: 'Kamar Mandi😂😂😂',          previewType: 0,
-                        thumbnail: fs.readFileSync("./thumbnail.jpg"),
-                        sourceUrl: sig
+                        body: 'Dim',          previewType: 0,
+                        thumbnail: fs.readFileSync("./lib/thumbnail.jpg"),
+                        sourceUrl: 'https://github.com'
                       }}
 })
 }

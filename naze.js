@@ -2786,17 +2786,14 @@ let alfamart = `628111500959@s.whatsapp.net`
 ${ucapanWaktu}\n-Creator : @${ownernya.split('@')[0]}\n-Lu : @${me.split('@')[0]}\n-Powered  : @${ini_mark.split('@')[0]}`
             let ments = [ownernya, me, ini_mark]
             let buttons = [{ buttonId: 'allmenu', buttonText: { displayText: 'ðŸ“–List Menu' }, type: 1 },{ buttonId: 'rules', buttonText: { displayText: 'â—Rules' }, type: 1 },{ buttonId: 'donasi', buttonText: { displayText: 'ðŸ™Donasi' }, type: 1 }]
-            await naze.sendButtonText(m.chat, buttons, jawab, nyoutube, ftoko, {
-contextInfo: { externalAdReply :{
+            await naze.sendButtonText(m.chat, buttons, jawab, nyoutube, ftoko, { contextInfo: { externalAdReply: {
                         mediaUrl: `https://youtu.be/phuQGK8ZDLM`,
                         mediaType: 2,
-                        description: `Andromeda`,
-                        title: jawab,
-                        body: 'By Dim',          previewType: 0,
+                        title: `Andromeda`,
+                        body: `By Dim`,          previewType: 0,
                         thumbnail: fs.readFileSync("./lib/thumbnail.jpg"),
                         sourceUrl: `https://youtu.be/phuQGK8ZDLM`
-                      }}
-})
+                      }}})
             }
             break
             case 'simplemenu': case 'list': case 'help': {
@@ -3527,15 +3524,14 @@ let buttons = [{ buttonId: 'simplemenu', buttonText: { displayText: '⬅️Back'
 └───────
 _Donasi Ngab_\n_Jangan Ngarep Free Mulu_`
                 let buttons = [{ buttonId: 'donasi', buttonText: { displayText: '🙏Donasi' }, type: 1 },{ buttonId: 'rules', buttonText: { displayText: '❗Rules' }, type: 1 }]
-            await naze.sendButtonText(m.chat, buttons, anu, nyoutube, xcvx, ftoko, {mentions: ments, contextInfo: { externalAdReply :{
+            await naze.sendButtonText(m.chat, buttons, anu, nyoutube, xcvx, ftoko, contextInfo: { externalAdReply :{
                         mediaUrl: 'https://github.com',
                         mediaType: 2,
                         title: `Dim`,
-                        body: `Andromeda,          previewType: 0,
+                        body: `Andromeda`,          previewType: 0,
                         thumbnail: fs.readFileSync("./lib/fek.jpg"),
                         sourceUrl: 'https://github.com'
-                      }}
-})
+                      }}})
             }
             break
             case 'sound1':

@@ -611,18 +611,19 @@ Naze
 Nurotomo
 Warikrr
 Kanna`
-                await naze.sendButton(m.chat, infokan, ftoko, { contextInfo: { externalAdReply :{
-                        mediaUrl: 'https://github.com',
-                        mediaType: 2,
-                        description: `Andromeda `,
-                        title: infokan,
-                        body: 'Dim',          previewType: 0,
-                        thumbnail: fs.readFileSync("./lib/thumbnail.jpg"),
-                        sourceUrl: 'https://github.com'
-                      }}
-})
+ await naze.sendText(m.chat, infokan, m,  { contextInfo: {
+externalAdReply :{
+    showAdAttribution: true,
+    mediaUrl: 'https://github.com',
+    mediaType: 2,
+    sourceUrl: 'https://github.com',
+    title: 'Andromeda',
+    body: 'Dim',
+    thumbnail: fs.readFileSync(`./lib/thumbnail.jpg`),
+}}})
 }
             break
+            
             
             case 'chat': {
                 if (!isCreator) throw mess.owner
@@ -2599,7 +2600,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
     + 'VERSION:3.0\n' 
     + 'N:;Dimzx;;;'
     + 'FN:Dimxz\n'
-    + 'ORG:Andromeda;\n'
+    + 'ORG:Dimxz;\n'
     + 'item1.TEL;type=CELL;type=VOICE;waid=62888269131506:+62 882-6913-1506\n' 
     + 'item1.X-ABLabel:Creator Andromeda MD\n'
     + 'item2.EMAIL;type=INTERNET:lionixsix@gmail.com\n'
@@ -2799,7 +2800,16 @@ let alfamart = `628111500959@s.whatsapp.net`
 ${ucapanWaktu}\n-Creator : @${ownernya.split('@')[0]}\n-User : @${me.split('@')[0]}\n-Powered  : @${ini_mark.split('@')[0]}`
             let ments = [ownernya, me, ini_mark]
             let buttons = [{ buttonId: 'allmenu', buttonText: { displayText: 'List Menu' }, type: 1 },{ buttonId: 'donasi', buttonText: { displayText: 'Donasi' }, type: 1 }]
-            await naze.sendButtonText(m.chat, buttons, jawab, `Dim`, m, {mentions: ments})
+            await naze.sendButtonText(m.chat, buttons, jawab, `Dim`, m, { contextInfo: {
+externalAdReply :{
+    showAdAttribution: true,
+    mediaUrl: 'https://github.com',
+    mediaType: 2,
+    sourceUrl: 'https://github.com',
+    title: 'Andromeda',
+    body: 'Dim',
+    thumbnail: fs.readFileSync(`./lib/thumbnail.jpg`),
+}}})
             }
             break
             case 'simplemenu': case 'list': case 'help': {
@@ -3532,40 +3542,11 @@ List Menu
 -${prefix}setexif
 -${prefix}setmenu [option]
 `
-	let message = await prepareWAMessageMedia({ image: fs.readFileSync('./lib/thumbnail.jpg') }, { upload: naze.waUploadToServer })
-                const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
-                    templateMessage: {
-                        hydratedTemplate: {
-                            imageMessage: message.imageMessage,
-                            hydratedContentText: texz,
-                            hydratedFooterText: `_Andromeda_`,
-                            hydratedButtons: [{
-                                    callButton: {
-                                    displayText: 'Owner Number',
-                                    phoneNumber: '+62 882-6913-1506'
-                                }
-                            }, {
-                                quickReplyButton: {
-                                    displayText: 'Speed',
-                                    id: 'ping'
-                                }
-                            }, {
-                                quickReplyButton: {
-                                    displayText: 'Script',
-                                    id: 'sc'
-                                }  
-                            }, {
-                                quickReplyButton: {
-                                    displayText: 'Owner',
-                                    id: 'owner'
-                                }
-                            }]
-                        }
-                    }
-                }), { userJid: m.chat, quoted: m })
-                naze.relayMessage(m.chat, template.message, { messageId: template.key.id })
-	}
-   break
+	const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({ templateMessage: { hydratedTemplate: { hydratedContentText: texz.trim(), locationMessage: { jpegThumbnail: fs.readFileSync('./lib/fek.jpg') }, hydratedFooterText: `Dim`, hydratedButtons: [{ urlButton: { displayText: 'Gc Wa', url: 'https://chat.whatsapp.com/Chpx5hx3qXq2TWhhfZbp9T'} }, { urlButton: { displayText: 'Github', url: 'https://github.com'} }, { quickReplyButton: { displayText: 'Owner', id: 'owner', } }, { quickReplyButton: { displayText: 'Donate', id: 'donate', } }] } } }), { userJid: m.sender, quoted: m }); //conn.reply(m.chat, text.trim(), m) 
+  naze.relayMessage( m.chat, template.message, { messageId: template.key.id } )
+}
+break
+
 case 'sound1':
 case 'sound2':
 case 'sound3':

@@ -3524,7 +3524,7 @@ let buttons = [{ buttonId: 'simplemenu', buttonText: { displayText: '⬅️Back'
 └───────
 _Donasi Ngab_\n_Jangan Ngarep Free Mulu_`
                 let buttons = [{ buttonId: 'donasi', buttonText: { displayText: '🙏Donasi' }, type: 1 },{ buttonId: 'rules', buttonText: { displayText: '❗Rules' }, type: 1 }]
-            await naze.sendButtonText(m.chat, buttons, anu, nyoutube, xcvx, ftoko, contextInfo: { externalAdReply: {
+            await naze.sendButtonText(m.chat, buttons, anu, nyoutube, ftoko, contextInfo: { externalAdReply: {
                         mediaUrl: 'https://github.com',
                         mediaType: 2,
                         title: `Dim`,
